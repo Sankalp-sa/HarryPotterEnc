@@ -62,10 +62,10 @@ export default function Spells() {
     }, [])
 
     return (
-        <div>
+        <div id="spelldiv">
             <Navbar />
             <div className="text-light d-flex align-items-center justify-content-center flex-column">
-                <h1 className='mb-5 title py-5'>Spells</h1>
+                <h1 id='spellhead' className='mb-5 title py-5'>Spells</h1>
                 <div className='row w-75'>
                     {loading ? <Spinner/> : spells.map((sp) => (
                         <Link to={`spells/${sp._id}`} className="col-md-6 text-decoration-none" >
