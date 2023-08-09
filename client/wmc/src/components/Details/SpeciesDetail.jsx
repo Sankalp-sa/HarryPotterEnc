@@ -96,7 +96,7 @@ export default function SpeciesDetail() {
                                 <textarea className="form-control" placeholder="Leave a comment here" id="comments" value={comment} onChange={(e) => setComment(e.target.value)} defaultValue={""} style={{ height: "100px" }} />
                                 <label htmlFor="floatingTextarea">Comments</label>
                             </div>
-                            <button className='btn btn-primary mt-3' id='addcbtn'>Add Comment</button>
+                            <button className='btn btn-primary mt-3' id='addcbtn' onClick={handleComment(species?._id)}>Add Comment</button>
                         </form>
                     </div>
                     <div className='p-4 text-light'>

@@ -6,12 +6,15 @@ import { useAuth } from '../../contexts/auth';
 import { Link } from 'react-router-dom';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import { handleAudio } from './audio';
+import Spinner from './Spinner';
 
 export default function Spells() {
 
     const [spells, setSpells] = useState([]);
     const [page, setPage] = useState(1);
     const pagesize = 4;
+
+    const [loading, setLoading] = useState(true);
 
 
     const { auth } = useAuth();
@@ -23,6 +26,7 @@ export default function Spells() {
             const res = await axios.get(`${import.meta.env.VITE_REACT_API_APP_PORT}/api/v1/users/spells?page=${page}&pagesize=${pagesize}`);
             console.log(res.data);
             setSpells(res.data.spells);
+            setLoading(false);
 
 
         } catch (error) {
@@ -53,6 +57,7 @@ export default function Spells() {
     }
 
     useEffect(() => {
+        setLoading(true);
         getSpells();
     }, [])
 
@@ -62,8 +67,8 @@ export default function Spells() {
             <div className="text-light d-flex align-items-center justify-content-center flex-column">
                 <h1 className='mb-5 title py-5'>Spells</h1>
                 <div className='row w-75'>
-                    {spells.map((sp) => (
-                        <Link to={`spells/${sp/_id}`} className="col-md-6 text-decoration-none" >
+                    {loading ? <Spinner/> : spells.map((sp) => (
+                        <Link to={`spells/${sp._id}`} className="col-md-6 text-decoration-none" >
                             <div id="spellcard" className="container d-flex justify-content-center my-4 mb-5">
                                 <div id="mobile-box">
                                     <div className="card">
@@ -73,7 +78,7 @@ export default function Spells() {
 <div className="mask" style={{backgroundColor: 'rgba(251, 251, 251, 0.15)'}} />
                                             </Link>
                                         </div>
-                                        <div className="card-body text-center">
+                                        <div id='spellcard2' className="card-body text-center">
                                             <h5 className="h5 font-weight-bold">{sp.name}</h5>
                                             <p className="mb-0">Category : {sp.category}</p>
                                             <audio id={`${sp._id}`} preload="true">
