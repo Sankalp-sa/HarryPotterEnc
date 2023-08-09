@@ -25,6 +25,32 @@ bgvideo {
     position: absolute;
 }
 
+#bgvid {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#quizhead {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+#sortform {
+    opacity: 1;
+    background: url("riddle.png");
+    padding: 4rem;
+    position: absolute;
+    width: 50%;
+    background-size: cover;
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 1.3rem;
+    animation: fade-in 2s ease-in 50s forwards;
+    animation: float 3s ease-out infinite forwards;
+    color: rgb(31, 0, 0);
+}
+
 .logo {
     display: flex;
     margin-left: -2rem;
@@ -430,6 +456,7 @@ bgvideo {
 .reg-div-1 {
     display: flex;
     /* position: absolute; */
+    scale: 0.6;
     flex-direction: column;
     color: rgb(40, 0, 0);
     text-align: center;
@@ -441,13 +468,14 @@ bgvideo {
     padding: 7rem 10rem;
     align-items: center;
     justify-content: center;
+    animation: float 2s ease-out infinite forwards;
 }
 
 #reghead0 {
     opacity: 0;
     font-family: 'Estonia', cursive;
     font-size: 4rem;
-    animation: fade-in 7s ease-out 1s forwards;
+    animation: fade-in 5s ease-out 1s forwards;
     /* animation: fade-out 7s ease-out 1s forwards; */
     /* animation-delay: 10s; */
 }
@@ -456,7 +484,7 @@ bgvideo {
     opacity: 0;
     font-family: 'Estonia', cursive;
     font-size: 4rem;
-    animation: fade-in 6.5s ease-out 7s forwards;
+    animation: fade-in 4s ease-out 7s forwards;
     margin-top: 7rem;
     /* animation: fade-out 6.5s ease-out 7s forwards; */
 }
@@ -474,14 +502,14 @@ bgvideo {
     align-items: center;
     justify-content: center;
     border-bottom: 1px solid;
-    animation: fade-in 6.5s ease-out 7s forwards;
+    animation: fade-in 4s ease-out 7s forwards;
     /* animation: fade-out 6.5s ease-out 7s forwards; */
 }
 
 .reg-button {
     opacity: 0;
     margin-top: 2rem;
-    animation: fade-in 6.5s ease-out 7s forwards;
+    animation: fade-in 4s ease-out 7s forwards;
     /* animation: fade-out 6.5s ease-out 7s forwards; */
     font-family: 'La Belle Aurore', cursive;
     font-size: 2.5rem;
@@ -495,7 +523,7 @@ bgvideo {
     opacity: 0;
     font-family: 'La Belle Aurore', cursive;
     font-size: 4rem;
-    animation: fade-in 6.5s ease-out 7s forwards;
+    animation: fade-in 4s ease-out 7s forwards;
     /* animation: fade-out 6.5s ease-out 7s forwards; */
     /* margin-top: 12rem; */
 }
@@ -585,7 +613,8 @@ bgvideo {
     color: aliceblue;
     /* align-items: center; */
     text-align: center;
-    font-family: 'Elsie Swash Caps', cursive;
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 2rem;
 }
 
 #login {
@@ -747,10 +776,125 @@ bgvideo {
     background: black;
 }
 
+#adiv {
+    background: url("castlenight.png");
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+}
+
+#wdiv {
+    background: url("ollivanders4.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+#whead {
+    font-family: 'Cinzel Decorative', cursive;
+}
+
+#ldiv {
+    background: url("hogwartsentry1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    color: aquamarine;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#loginf {
+    padding: 3rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 11px;
+    background-color: rgba(0,0,0,0.3);
+    font-family: 'Cinzel Decorative', cursive;
+    box-shadow: 0 0 500px aquamarine;
+    animation: float 2s ease-out infinite forwards;
+}
+
+#loghead {
+    text-align: center;
+    font-size: x-large;
+}
+
+
+#linput {
+    background: none;
+    outline: none;
+    border: none;
+    border-radius: 0;
+    color: aquamarine;
+    text-shadow: 0 0 8px aquamarine;
+    border-bottom: solid 1px white;
+}
+
+#lbut {
+    width: 50%;
+    background: rgba(0,0,0,0.22);
+}
+
+#lbut:hover {
+    width: 50%;
+    box-shadow: 0 0 10px red;
+}
+
+#lbutdiv {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#regdivbg {
+    background: url("harryletters.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 @media only screen and (max-width: 436px) {
 
     #spellcard {
         width: 100%;
+    }
+
+    #head01 {
+        font-size: 2rem;
+    }
+
+    #head02 {
+        font-size: 2rem;
+    }
+
+    #fdivhead {
+        font-size: 1rem;
+    }
+
+    #fdivp2 {
+        background-image: url("/Page03.png");
+        background-size: 100%;
+        border-radius: 10px;
+        align-items: center;
+        box-shadow: 0 0 1600px rgb(253, 207, 0);
+    
+    }
+
+    #fdiv {
+        margin-top: -5rem;
+        padding: 2rem;
+        /* border: solid white; */
+    }
+
+    #fpara {
+        color: rgb(255, 234, 0);
+        text-shadow: 0 0 8px rgb(217, 255, 0);
+        font-size: 1rem;
+        font-family: 'Lancelot', cursive;
     }
 
     #hgl {
@@ -784,9 +928,27 @@ bgvideo {
         font-family: 'Estonia', cursive;
         font-size: 2.5rem;
         width: 20rem;
-        animation: fade-in 7s ease-out 1s forwards;
+        animation: fade-in 5s ease-out 1s forwards;
         /* animation: fade-out 7s ease-out 1s forwards; */
         /* animation-delay: 10s; */
+    }
+
+    .reg-div-1 {
+        display: flex;
+        /* position: absolute; */
+        scale: 0.6;
+        flex-direction: column;
+        color: rgb(40, 0, 0);
+        text-align: center;
+        /* font-family: 'Elsie Swash Caps', cursive; */
+        background: none;
+        background-image: url(/riddle.png);
+        /* background-size: cover; */
+        height: 100vh;
+        padding: 7rem 10rem;
+        align-items: center;
+        justify-content: center;
+        animation: float 2s ease-out infinite forwards;
     }
     
     .reg-head-1 {
@@ -794,7 +956,7 @@ bgvideo {
         font-family: 'Estonia', cursive;
         font-size: 2.5rem;
         width: 20rem;
-        animation: fade-in 6.5s ease-out 7s forwards;
+        animation: fade-in 4s ease-out 5s forwards;
         margin-top: 7rem;
         /* animation: fade-out 6.5s ease-out 7s forwards; */
     }
@@ -812,14 +974,14 @@ bgvideo {
         align-items: center;
         justify-content: center;
         border-bottom: 1px solid;
-        animation: fade-in 6.5s ease-out 7s forwards;
+        animation: fade-in 4s ease-out 5s forwards;
         /* animation: fade-out 6.5s ease-out 7s forwards; */
     }
     
     .reg-button {
         opacity: 0;
         margin-top: 2rem;
-        animation: fade-in 6.5s ease-out 7s forwards;
+        animation: fade-in 4s ease-out 5s forwards;
         /* animation: fade-out 6.5s ease-out 7s forwards; */
         font-family: 'La Belle Aurore', cursive;
         font-size: 1.5rem;
@@ -833,13 +995,35 @@ bgvideo {
         opacity: 0;
         font-family: 'La Belle Aurore', cursive;
         font-size: 2.5rem;
-        animation: fade-in 6.5s ease-out 7s forwards;
+        animation: fade-in 4s ease-out 5s forwards;
         /* animation: fade-out 6.5s ease-out 7s forwards; */
         /* margin-top: 12rem; */
     }
     
     #subbut {
+        animation: fade-in 3.5s ease-out 5s forwards;
+    }
+
+    .nbdiv {
+        opacity: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         animation: fade-in 3.5s ease-out 7s forwards;
+        width: 100%;
+        text-align: center;
+    }
+
+    #loginf {
+        padding: 3rem;
+        align-items: center;
+        justify-content: center;
+        border-radius: 11px;
+        scale: 0.5;
+        background-color: rgba(0,0,0,0.3);
+        font-family: 'Cinzel Decorative', cursive;
+        box-shadow: 0 0 500px aquamarine;
+        animation: float 2s ease-out infinite forwards;
     }
 }
 
